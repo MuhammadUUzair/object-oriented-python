@@ -43,7 +43,7 @@ class complexNumber:
         resultReal = 0
         resultImag = 0
         den = other.real**2 + other.imag**2
-        ans = self * complexNumber(other.real/den,(-1*other.imag)/den)
+        ans = self * other.conjugate()
         return ans
     
     def __eq__(self, other):
@@ -61,6 +61,6 @@ class complexNumber:
 # print(cn)
 c1 = complexNumber(3,4)
 c2 = complexNumber(4,5)
-print(c1==c2)
+print(c1/c2)
 # print(c1.conjugate())
         
